@@ -1,5 +1,5 @@
 html {
-  --color-accent: oklch(70.479% 0.1163 194.877);
+  --color-accent: oklch(66.343% 0.11111 194.847);
   accent-color: var(--color-accent);
 }
 
@@ -77,5 +77,124 @@ form {
     h2 {
       margin: 0;
     }
+  }
+}
+
+#resume {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  section h2 {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+
+    header {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+      align-items: baseline;
+
+      h3 {
+        margin: 0;
+      }
+
+      time {
+        font-style: italic;
+        color: #666;
+      }
+    }
+  }
+
+  #skills ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+#resume_head {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.5rem;
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#education article {
+  margin-bottom: 1.5rem;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+
+    .title-info {
+      h3 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0.25rem 0 0 0;
+        color: #444;
+      }
+    }
+
+    .meta-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; 
+      text-align: right;
+
+      img {
+        max-height: 100px;
+        width: auto;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        margin: 0;
+
+        time {
+          font-style: italic;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0.25rem 0;
+  }
+
+  ul {
+    margin-top: 0.25rem;
+    padding-left: 1.25rem;
   }
 }
