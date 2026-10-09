@@ -4,16 +4,6 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// let navLinks = $$("nav a");
-
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname,
-// );
-
-// if (currentLink) {
-//   currentLink.classList.add('current');
-// }
-
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"
   : "/portfolio/";
@@ -57,4 +47,31 @@ for (let p of pages) {
   }
 
   nav.append(a);
+}
+
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<option value="light dark">Automatic</option>
+			<option value="light">Light</option>
+			<option value="dark">Dark</option>
+		</select>
+	</label>`,
+);
+
+let select = document.querySelector('.color-scheme select');
+
+select.addEventListener('input', function (event) {
+  console.log('color scheme changed to', event.target.value);
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
+  localStorage.colorScheme = event.target.value;
+});
+
+if ("colorScheme" in localStorage) {
+  let savedScheme = localStorage.colorScheme;
+  document.documentElement.style.setProperty('color-scheme', savedScheme);
+  select.value = savedScheme;
 }
