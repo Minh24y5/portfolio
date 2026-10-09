@@ -23,10 +23,12 @@ body {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  
   display: flex;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid;
-  --border-color: oklch(50% 10% 200 / 40%);
+  padding-right: 100px;
 
   ul, li {
     display: contents;
