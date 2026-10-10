@@ -28,7 +28,6 @@ nav {
   display: flex;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid;
-  padding-right: 100px;
 
   ul, li {
     display: contents;
