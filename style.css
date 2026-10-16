@@ -211,3 +211,35 @@ form {
   right: 1rem;
   font-size: 80%;
 }
+
+#profile-stats {
+  margin-block: 2rem;
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.25rem 1rem;
+    margin: 0;
+  }
+
+  dt {
+    grid-row: 1;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #6b7280;
+  }
+
+  dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+}
