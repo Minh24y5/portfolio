@@ -137,6 +137,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       <${headingLevel}>${project.title ?? 'Untitled project'}</${headingLevel}>
       ${project.image ? `<img src="${project.image}" alt="${project.title ?? ''}">` : ''}
       <p>${project.description ?? ''}</p>
+      ${project.year ? `<time class="project-year" datetime="${project.year}">c. ${project.year}</time>` : ''}
     `;
 
     containerElement.appendChild(article);

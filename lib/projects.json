@@ -1,63 +1,74 @@
 [
     {
         "title": "Lorem ipsum dolor sit.",
-        "year": "2024",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit.",
+        "year": "2024"
     },
     {
         "title": "Mollitia atque praesentium tempore.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quibusdam alias sint perspiciatis voluptatibus ducimus quo sunt velit dolores nulla, numquam odio sequi expedita at eveniet maxime non libero quod ea reiciendis dignissimos repellat. Repellat amet quo natus modi!"
+        "description": "Quibusdam alias sint perspiciatis voluptatibus ducimus quo sunt velit dolores nulla, numquam odio sequi expedita at eveniet maxime non libero quod ea reiciendis dignissimos repellat. Repellat amet quo natus modi!",
+        "year": "2026"
     },
     {
         "title": "Deserunt laborum amet assumenda!",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Totam quo vitae expedita omnis optio consequatur nam quod, nostrum in velit inventore cum dicta ab repellendus eius atque qui? Sint ducimus debitis beatae, libero eaque iusto eum soluta eos!"
+        "description": "Totam quo vitae expedita omnis optio consequatur nam quod, nostrum in velit inventore cum dicta ab repellendus eius atque qui? Sint ducimus debitis beatae, libero eaque iusto eum soluta eos!",
+        "year": "2023"
     },
     {
         "title": "Nam, eius. Consequatur, consectetur.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Harum hic ducimus dolores architecto facilis, doloribus expedita dicta! Odio vitae doloribus molestias nobis dignissimos magni odit consectetur numquam, perferendis similique dicta quidem commodi aut esse, debitis, autem excepturi facere?"
+        "description": "Harum hic ducimus dolores architecto facilis, doloribus expedita dicta! Odio vitae doloribus molestias nobis dignissimos magni odit consectetur numquam, perferendis similique dicta quidem commodi aut esse, debitis, autem excepturi facere?",
+        "year": "2025"
     },
     {
         "title": "Obcaecati modi illo maiores?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Reiciendis fugiat quos, accusamus similique blanditiis provident rem optio totam impedit velit officiis est illum voluptatem ab quis quibusdam cum minima quod excepturi porro alias nemo libero assumenda. Veniam, totam."
+        "description": "Reiciendis fugiat quos, accusamus similique blanditiis provident rem optio totam impedit velit officiis est illum voluptatem ab quis quibusdam cum minima quod excepturi porro alias nemo libero assumenda. Veniam, totam.",
+        "year": "2024"
     },
     {
         "title": "Explicabo vero cumque autem.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Alias eveniet laboriosam quia quisquam autem sed nemo repellendus. Dicta, debitis. Earum sit nobis ipsum aliquid! Fuga tempore qui perferendis ducimus numquam consequuntur modi pariatur dolor rem, aliquid fugiat eligendi."
+        "description": "Alias eveniet laboriosam quia quisquam autem sed nemo repellendus. Dicta, debitis. Earum sit nobis ipsum aliquid! Fuga tempore qui perferendis ducimus numquam consequuntur modi pariatur dolor rem, aliquid fugiat eligendi.",
+        "year": "2026"
     },
     {
         "title": "Libero est odit omnis?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ratione reiciendis magni corrupti est similique culpa! Voluptas at recusandae nihil impedit minus dolorem doloremque culpa magnam. Illum ducimus atque maxime earum quisquam rem, a nam cupiditate eveniet consectetur ab?"
+        "description": "Ratione reiciendis magni corrupti est similique culpa! Voluptas at recusandae nihil impedit minus dolorem doloremque culpa magnam. Illum ducimus atque maxime earum quisquam rem, a nam cupiditate eveniet consectetur ab?",
+        "year": "2023"
     },
     {
         "title": "Saepe labore recusandae blanditiis.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Optio, error. Aut doloribus necessitatibus ex inventore beatae reprehenderit, officia repellendus atque, possimus minima voluptatibus mollitia minus consectetur. Laborum aspernatur dolor, quo repellendus odio aliquid eveniet quod est accusantium nihil?"
+        "description": "Optio, error. Aut doloribus necessitatibus ex inventore beatae reprehenderit, officia repellendus atque, possimus minima voluptatibus mollitia minus consectetur. Laborum aspernatur dolor, quo repellendus odio aliquid eveniet quod est accusantium nihil?",
+        "year": "2025"
     },
     {
         "title": "In laborum vitae doloremque.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Pariatur, reiciendis, officia voluptatem ipsum provident eos at corrupti ad quisquam quam quas dolorum iure. Earum libero quas voluptas. Adipisci iure accusamus dolorem voluptate et accusantium sunt dolores, provident aperiam!"
+        "description": "Pariatur, reiciendis, officia voluptatem ipsum provident eos at corrupti ad quisquam quam quas dolorum iure. Earum libero quas voluptas. Adipisci iure accusamus dolorem voluptate et accusantium sunt dolores, provident aperiam!",
+        "year": "2026"
     },
     {
         "title": "Deserunt veritatis dignissimos reprehenderit!",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quia neque assumenda cupiditate porro rerum laborum explicabo, obcaecati debitis expedita nisi, incidunt pariatur quaerat quos necessitatibus ducimus dignissimos? Et nesciunt earum totam incidunt eum, adipisci hic expedita laudantium numquam."
+        "description": "Quia neque assumenda cupiditate porro rerum laborum explicabo, obcaecati debitis expedita nisi, incidunt pariatur quaerat quos necessitatibus ducimus dignissimos? Et nesciunt earum totam incidunt eum, adipisci hic expedita laudantium numquam.",
+        "year": "2024"
     },
     {
         "title": "Ab saepe illum labore.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sequi voluptates vel quas sint iusto, blanditiis tenetur maxime nobis velit, omnis mollitia beatae laborum, corporis adipisci nihil possimus voluptatem molestiae harum officia vitae aspernatur! Pariatur soluta ullam consectetur accusamus?"
+        "description": "Sequi voluptates vel quas sint iusto, blanditiis tenetur maxime nobis velit, omnis mollitia beatae laborum, corporis adipisci nihil possimus voluptatem molestiae harum officia vitae aspernatur! Pariatur soluta ullam consectetur accusamus?",
+        "year": "2025"
     },
     {
         "title": "Illo illum aspernatur animi.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Accusamus ab explicabo, labore placeat alias commodi saepe earum modi aut blanditiis praesentium iure iusto quisquam magni laborum ipsam porro obcaecati, cupiditate inventore possimus ipsum consectetur adipisci natus voluptatem! Aliquam?"
+        "description": "Accusamus ab explicabo, labore placeat alias commodi saepe earum modi aut blanditiis praesentium iure iusto quisquam magni laborum ipsam porro obcaecati, cupiditate inventore possimus ipsum consectetur adipisci natus voluptatem! Aliquam?",
+        "year": "2023"
     }
 ]
