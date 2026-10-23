@@ -94,6 +94,13 @@ form {
   }
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
 #resume {
   display: flex;
   flex-direction: column;
