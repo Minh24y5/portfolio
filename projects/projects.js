@@ -8,17 +8,19 @@ const titleElement = document.querySelector('.projects-title');
 renderProjects(projects, projectsContainer, 'h2');
 
 if (titleElement && Array.isArray(projects)) {
-    titleElement.textContent = `${projects.length} Projects`;
+  titleElement.textContent = `${projects.length} Projects`;
 }
 
-let data = [
-  { value: 1, label: 'apples' },
-  { value: 2, label: 'oranges' },
-  { value: 3, label: 'mangos' },
-  { value: 4, label: 'pears' },
-  { value: 5, label: 'limes' },
-  { value: 5, label: 'cherries' },
-];
+let rolledData = d3.rollups(
+  projects,
+  (v) => v.length,
+  (d) => d.year,
+);
+
+let data = rolledData.map(([year, count]) => {
+  return { value: count, label: year };
+});
+
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 let sliceGenerator = d3.pie().value((d) => d.value);
