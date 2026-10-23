@@ -289,3 +289,19 @@ form {
   align-items: center;
   gap: 2em;
 }
+
+.searchBar {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em 0.75em;
+  font-size: 1rem;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
