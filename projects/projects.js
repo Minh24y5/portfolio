@@ -8,7 +8,8 @@ const searchInput = document.querySelector('.searchBar');
 
 let query = '';
 let selectedIndex = -1;          
-let searchFiltered = projects;   
+let selectedYear = null;    
+let searchFiltered = projects;
 let currentData = [];
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
@@ -24,7 +25,6 @@ function renderVisibleProjects() {
   if (selectedIndex === -1) {
     renderProjects(searchFiltered, projectsContainer, 'h2');
   } else {
-    let selectedYear = currentData[selectedIndex].label;
     let yearFiltered = searchFiltered.filter(
       (project) => project.year === selectedYear,
     );
@@ -54,7 +54,12 @@ function renderPieChart(projectsGiven) {
   let newData = newRolledData
     .map(([year, count]) => ({ value: count, label: year }))
     .sort((a, b) => d3.ascending(a.label, b.label));
-  currentData = newData;   
+  currentData = newData;
+
+  selectedIndex =
+    selectedYear === null
+      ? -1
+      : newData.findIndex((d) => d.label === selectedYear);
 
   let newSliceGenerator = d3.pie().value((d) => d.value);
   let newArcData = newSliceGenerator(newData);
@@ -73,6 +78,7 @@ function renderPieChart(projectsGiven) {
       .attr('fill', colors(i))
       .on('click', () => {
         selectedIndex = selectedIndex === i ? -1 : i;
+        selectedYear = selectedIndex === -1 ? null : newData[i].label;
         updateSelection();
         renderVisibleProjects();
       });
@@ -89,6 +95,7 @@ function renderPieChart(projectsGiven) {
   updateSelection();
 }
 
+// Initial render
 if (titleElement) {
   titleElement.textContent = `${projects.length} Projects`;
 }
@@ -97,7 +104,6 @@ renderVisibleProjects();
 
 searchInput.addEventListener('input', (event) => {
   searchFiltered = setQuery(event.target.value);
-  selectedIndex = -1;  
   renderPieChart(searchFiltered);
   renderVisibleProjects();
 });
