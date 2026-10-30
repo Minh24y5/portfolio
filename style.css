@@ -349,3 +349,13 @@ path {
     line-height: 1.1;
   }
 }
+
+#chart .gridlines line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  stroke-width: 0.5;
+}
+
+#chart .gridlines path {
+  stroke: none;
+}
