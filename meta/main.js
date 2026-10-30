@@ -63,8 +63,8 @@ function renderCommitInfo(data, commits) {
   dl.append('dt').text('Longest file (lines)');
   dl.append('dd').text(longest[1]);
 
-  dl.append('dt').text('Max depth');
-  dl.append('dd').text(d3.greatest(data, (d) => d.depth));
+  dl.append('dt').text('Average depth');
+  dl.append('dd').text(d3.mean(data, (d) => d.depth).toFixed(2));
 
   const workByDay = d3.rollups(
     data,
