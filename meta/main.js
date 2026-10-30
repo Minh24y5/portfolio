@@ -64,7 +64,7 @@ function renderCommitInfo(data, commits) {
   dl.append('dd').text(longest[1]);
 
   dl.append('dt').text('Max depth');
-  dl.append('dd').text(d3.max(data, (d) => d.depth));
+  dl.append('dd').text(d3.greatest(data, (d) => d.depth));
 
   const workByDay = d3.rollups(
     data,
