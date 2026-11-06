@@ -1,15 +1,16 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit.",
-        "year": "2023"
+        "title": "Vietnam Climate Scenario Explorer",
+        "image": "../images/thumb1.png",
+        "description": "A visualization that uses CMIP6 dataset to show historical data about Vietnam temperature and prediction to 2100 with the help of Impeccable.",
+        "year": "2026",
+        "link": "https://minh24y5.github.io/Vietnam-climate-scenario-explorer/"
     },
     {
-        "title": "Mollitia atque praesentium tempore.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "title": "Bike Tracking Website.",
+        "image": "https://images.emojiterra.com/google/noto-emoji/unicode-17.0/color/share/1f6b2.jpg",
         "description": "Quibusdam alias sint perspiciatis voluptatibus ducimus quo sunt velit dolores nulla, numquam odio sequi expedita at eveniet maxime non libero quod ea reiciendis dignissimos repellat. Repellat amet quo natus modi!",
-        "year": "2024"
+        "year": "2026"
     },
     {
         "title": "Deserunt laborum amet assumenda!",
@@ -21,7 +22,7 @@
         "title": "Nam, eius. Consequatur, consectetur.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Harum hic ducimus dolores architecto facilis, doloribus expedita dicta! Odio vitae doloribus molestias nobis dignissimos magni odit consectetur numquam, perferendis similique dicta quidem commodi aut esse, debitis, autem excepturi facere?",
-        "year": "2026"
+        "year": "2023"
     },
     {
         "title": "Obcaecati modi illo maiores?",
@@ -30,10 +31,10 @@
         "year": "2024"
     },
     {
-        "title": "Explicabo vero cumque autem.",
+        "title": "Mollitia atque praesentium tempore",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Alias eveniet laboriosam quia quisquam autem sed nemo repellendus. Dicta, debitis. Earum sit nobis ipsum aliquid! Fuga tempore qui perferendis ducimus numquam consequuntur modi pariatur dolor rem, aliquid fugiat eligendi.",
-        "year": "2026"
+        "year": "2024"
     },
     {
         "title": "Libero est odit omnis?",

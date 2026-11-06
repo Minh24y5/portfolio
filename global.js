@@ -122,6 +122,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     return;
   }
   const list = Array.isArray(projects) ? projects : [projects];
+  const sorted = [...list].sort((a, b) => Number(b.year ?? 0) - Number(a.year ?? 0));
 
   const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
   if (!validHeadings.includes(headingLevel)) {
@@ -131,16 +132,19 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
   containerElement.innerHTML = '';
 
-  for (const project of list) {
+  for (const project of sorted) {
     const article = document.createElement('article');
+    const description = project.description ?? '';
+    const descriptionHTML = project.link
+      ? `<a class="description-link" href="${project.link}" target="_blank" rel="noopener noreferrer">${description}</a>`
+      : description;
 
     article.innerHTML = `
       <${headingLevel}>${project.title ?? 'Untitled project'}</${headingLevel}>
       ${project.image ? `<img src="${project.image}" alt="${project.title ?? ''}">` : ''}
-      <p>${project.description ?? ''}</p>
+      <p>${descriptionHTML}</p>
       ${project.year ? `<time class="project-year" datetime="${project.year}">c. ${project.year}</time>` : ''}
     `;
-
     containerElement.appendChild(article);
   }
 }
