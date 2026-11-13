@@ -6,6 +6,12 @@ let commitProgress = 100;
 let timeScale;
 let commitMaxTime;
 let filteredCommits;
+let lines = filteredCommits.flatMap((d) => d.lines);
+let files = d3
+  .groups(lines, (d) => d.file)
+  .map(([name, lines]) => {
+    return { name, lines };
+  });
 
 function onTimeSliderChange() {
   const slider = document.getElementById('commit-progress');
