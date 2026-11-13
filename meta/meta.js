@@ -17,6 +17,7 @@ function onTimeSliderChange() {
   filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
   updateFileDisplay(filteredCommits);
+  updateTimeDisplay(timeScale.invert(Number(slider.value)));
 }
 
 async function loadData() {
@@ -58,7 +59,8 @@ function processCommits(data) {
       });
 
       return ret;
-    });
+    })
+    .sort((a, b) => a.datetime - b.datetime);
 }
 
 function renderCommitInfo(data, commits) {
@@ -109,7 +111,7 @@ function updateTooltipPosition(event) {
 function renderTooltipContent(commit) {
   const link = document.getElementById('commit-link');
   const date = document.getElementById('commit-date');
-  const time = document.getElementById('commit-time');
+  const time = document.getElementById('commit-tooltip-time');
   const author = document.getElementById('commit-author');
   const lines = document.getElementById('commit-lines');
 
@@ -356,6 +358,19 @@ function updateFileDisplay(filteredCommits) {
     .attr('style', (d) => `--color: ${colors(d.type)}`);
 }
 
+function updateTimeDisplay(maxTime) {
+  commitMaxTime = maxTime;
+  commitProgress = timeScale(commitMaxTime);
+
+  document.getElementById('commit-progress').value = commitProgress;
+  document.getElementById('commit-time').textContent =
+    commitMaxTime.toLocaleString();
+
+  filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
+  updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
+}
+
 let data = await loadData();
 let commits = processCommits(data);
 
@@ -374,3 +389,42 @@ renderScatterPlot(data, commits);
 const slider = document.getElementById('commit-progress');
 slider.addEventListener('input', onTimeSliderChange);
 onTimeSliderChange();
+
+d3.select('#scatter-story')
+  .selectAll('.step')
+  .data(commits)
+  .join('div')
+  .attr('class', 'step')
+  .html(
+    (d, i) => `
+		On ${d.datetime.toLocaleString('en', {
+      dateStyle: 'full',
+      timeStyle: 'short',
+    })},
+		I made <a href="${d.url}" target="_blank">${
+      i > 0 ? 'another commit' : 'my first commit'
+    }</a>.
+		I edited ${d.totalLines} lines across ${
+      d3.rollups(
+        d.lines,
+        (D) => D.length,
+        (d) => d.file,
+      ).length
+    } files.
+		Then I looked over all I had made, and I thought it was OK.
+	`,
+  );
+
+import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
+
+function onStepEnter(response) {
+  updateTimeDisplay(response.element.__data__.datetime);
+}
+
+const scroller = scrollama();
+scroller
+  .setup({
+    container: '#scrolly-1',
+    step: '#scrolly-1 .step',
+  })
+  .onStepEnter(onStepEnter);
